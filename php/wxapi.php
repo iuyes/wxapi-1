@@ -1,8 +1,5 @@
 <?php
 include_once "WechatVerify.php";
-
-WechatVerify::checkInterfaceOK();
-exit;
 include_once "wxBizMsgCrypt.php";
 
 //公众平台配置信息
