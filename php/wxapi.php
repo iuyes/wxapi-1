@@ -1,4 +1,3 @@
-                                                                                                                                                                                         6,30         全部
 <?php
 include_once "WechatVerify.php";
 
