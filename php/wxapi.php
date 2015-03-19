@@ -1,5 +1,7 @@
                                                                                                                                                                                          6,30         全部
 <?php
+include_once "WechatVerify.php";
+
 WechatVerify::checkInterfaceOK();
 exit;
 include_once "wxBizMsgCrypt.php";
