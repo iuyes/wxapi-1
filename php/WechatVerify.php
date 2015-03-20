@@ -11,9 +11,11 @@ class WechatVerify
 {
     private $appId;
     private $appSecret;
-    public function __construct($appId,$appSecret){
+    private $appToken;
+    public function __construct($appId,$appSecret,$token){
         $this->appId = $appId;
         $this->appSecret = $appSecret;
+        $this->appToken = $token;
     }
     //微信校验接口是否有效
     public static function  checkInterfaceOK()
@@ -85,7 +87,7 @@ class WechatVerify
         $signature = $_GET["signature"];
         $timestamp = $_GET["timestamp"];
         $nonce = $_GET["nonce"];
-        $token = TOKEN;
+        $token = $this->token;
         $tmpArr = array($token, $timestamp, $nonce);
         sort($tmpArr, SORT_STRING);
         $tmpStr = implode( $tmpArr );

@@ -8,7 +8,7 @@ $token = "zcdmx101";
 $appId = "wxe4390e3ac4ce8ba4";
 $appSecret = "ca949dbe0e87c697855161c15bf56a5d";
 $pc = new WXBizMsgCrypt($token, $encodingAesKey, $appId);
-$wechatVerify = new WechatVerify($appId,$appSecret);
+$wechatVerify = new WechatVerify($appId,$appSecret,$token);
 if($wechatVerify->checkSignature()) {
         //post收到的消息密文
         $encryptMsg = $GLOBALS["HTTP_RAW_POST_DATA"];
