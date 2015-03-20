@@ -9,7 +9,7 @@ $appId = "wxe4390e3ac4ce8ba4";
 $appSecret = "ca949dbe0e87c697855161c15bf56a5d";
 $pc = new WXBizMsgCrypt($token, $encodingAesKey, $appId);
 $wechatVerify = new WechatVerify($appId,$appSecret);
-echo $wechatVerify->getAccessToken();
+echo $wechatVerify->getJsApiTicket();
 exit;
 //get方式接收的参数
 $timeStamp = $_GET['timestamp'];
